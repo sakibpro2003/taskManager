@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 const Tasks = () => {
   const tasks = useSelector(selectTasks);
   console.log(tasks);
+  // console.log(tasks.DueDate)
+
   return (
     <div>
       <h2>tasks</h2>
