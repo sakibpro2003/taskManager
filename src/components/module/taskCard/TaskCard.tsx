@@ -25,13 +25,13 @@ const TaskCard = ({ task }: IProps) => {
         >
           dkf
         </div>
-        <h5>{task.title}</h5>
+        <h5 className={cn({"line-through": task.isComplete})}>{task.title}</h5>
         <p>{task.description}</p>
       </div>
 
       <div className="">
         <Button onClick={() => dispatch(deleteTask(task.id))}>X</Button>
-        <Checkbox onClick={() => dispatch(toogleCompleteState(task.id))} />
+        <Checkbox checked={task.isComplete} onClick={() => dispatch(toogleCompleteState(task.id))} />
       </div>
     </div>
   );
